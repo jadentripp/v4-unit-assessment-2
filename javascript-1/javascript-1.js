@@ -37,7 +37,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-let animals = [...forest, ...ocean, ...savannah, ...desert];
+let animals = [...forest, ...ocean, ...savannah, ...desert]
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,8 +45,7 @@ let animals = [...forest, ...ocean, ...savannah, ...desert];
 */
 
 //CODE HERE
-const animalsCopy = [...animals];
-animalsCopy= animalsCopy.push('elephant');
+const animalsCopy = [...animals, 'elephant'];
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -57,22 +56,21 @@ animalsCopy= animalsCopy.push('elephant');
 */
 
 //CODE HERE
-const compareNums = (num1, num2) => {
-    let biggerNumber = null;
-    if (num1>num2){
-        biggerNumber = num1;
-        return biggerNumber;
-    }
-    else if(num1==num2){
-        biggerNumber = [num1,num2]
-        return biggerNumber;
-    }
-    else{
-        biggerNumber = num2;
-        return biggerNumber;
-    }
-}
-  
+// let compareNums =  (num1, num2) => {
+//     let biggerNumber = null;
+//     if (num1>num2){
+//         biggerNumber = num1;
+//         return biggerNumber;
+//     }
+//     else if(num1===num2){
+//        return num
+//     }
+//     else{
+//         biggerNumber = num2;
+//         return biggerNumber;
+//     }
+// }
+let compareNums = (num1, num2) => num1 > num2 ? num1 : num2;
 ////////////////////PROBLEM 5////////////////////
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
@@ -83,7 +81,7 @@ const compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-  const bestMovie = (movie) => `${movie} is the best movie ever!`;
+let bestMovie = (movie) => `${movie} is the best movie ever!`;
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -91,7 +89,7 @@ const compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-  let jsNinja = () => `I am a Javascript ninja!`;
+const jsNinja = () => 'I am a JavaScript ninja!'
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -135,12 +133,12 @@ const compareNums = (num1, num2) => {
 
 //CODE HERE
 const findEven = (shapes) =>  {
-    for (let shape in shapes){
-        if ((shape%2)!==0){
-            delete shapes[shape]
-        }
-    }
-    return shapes
+  for (let shape in shapes){
+      if ((shape%2)!==0){
+          delete shape;
+      }
+  }
+  return shapes
 }
 
   
@@ -206,12 +204,15 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-// for (i=0, i<lettersToPair.length, i++) {
-//     for (j=1, j<lettersToPair.length, j++) {
-//         if (lettersToPair[i]===lettersToPair[j])
-//         pairsArray.shift([lettersToPair[i], lettersToPair[j]])
-//     }
-// }
+for (let i = 0; i <= lettersToPair.length; i++){
+    for(let j = 1; i <= lettersToPair.length; j++){
+    if (i===j){
+            pairsArray.push([lettersToPair[i],lettersToPair[j]])
+        }
+    return pairsArray;
+}
+}
+
 
 
     //https://stackoverflow.com/questions/22566379/how-to-get-all-pairs-of-array-javascript
@@ -276,11 +277,11 @@ let fidoSpeak = bark.call(fido)
 */
 
 //CODE HERE
-function teachTrick  (trick) {
-    let tricks = [];
-    this.tricks.push(trick)
-    return tricks;
-}
+// function teachTrick  (trick) {
+//     let tricks = [];
+//     this.tricks.push(trick)
+//     return tricks;
+// }
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
     Save the result to a variable called 'teachStay'.
@@ -299,7 +300,7 @@ let teachStay = teachTrick.bind(fido, 'stay')
 
 //CODE HERE
 function dogIntro (treat, toy) {
-    return (`${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}`)
+    return `${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}`
 }
 
 /*
@@ -309,7 +310,7 @@ function dogIntro (treat, toy) {
 */
 
 //CODE HERE
-let fidoIntro =   dogIntro.apply(fido, 'chicken', 'tennis ball');
+const fidoIntro = dogIntro.apply(fido, 'chicken', 'tennis ball');
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -353,8 +354,7 @@ function Phone(brand, model, storage, color, sold){
 */
 
 //CODE HERE
-
-  Phone.prototype.sell = function(){
+Phone.prototype.sell = function(){
       this.sold = true;
       return `${this.brand} ${this.model} has been sold.`
   }

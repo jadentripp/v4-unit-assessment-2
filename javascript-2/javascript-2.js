@@ -81,7 +81,10 @@ const products = [
 */
 
 //CODE HERE
-let saleProducts = products.map(element => element.price=(element.price*.75))
+function saleProducts (){
+  products.map(element.name*.75)
+}
+// let saleProducts = products.map(element => element.price=(element.price*.75))
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
