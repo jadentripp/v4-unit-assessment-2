@@ -17,7 +17,7 @@ p,li,h1,h3 {
         sans-serif;
 }
 /*header*/
-.header{
+header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,6 +55,7 @@ p,li,h1,h3 {
     text-align: left;
     width: 50%;
     line-height: 20px;
+    padding-right: 20%;
 }
 h1{
     font-weight: 550;
@@ -105,6 +106,7 @@ h1{
     width: 200px;;
     -webkit-box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, 0.5);
     box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
 }
 .popArticles-title{
 font: bolder;
@@ -157,8 +159,7 @@ color: rgb(42, 171, 226);
     height: 2.5rem;
 }
 #footer>p{
-  margin-top: 12px;
-  margin-left: 10px;
+    margin: 12px, 0, 0, 10px;
 }
 .help-button{
     position: fixed;
@@ -170,5 +171,8 @@ color: rgb(42, 171, 226);
     background-color: transparent;
     margin-bottom: 5px;
     margin-right: 5px;
+}
+#left-margin{
+   padding-left: 5%;
 }
 /* footer */
